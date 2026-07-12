@@ -25,7 +25,7 @@
         "actions": {
           "default": "{color.primary.100}"
         },
-        "$value": "#8e9fbf",
+        "$value": "#9AAB6E",
         "$description": "Primary color of level 100."
       },
       "500": {
@@ -33,11 +33,11 @@
         "actions": {
           "default": "{color.primary.500}"
         },
-        "$value": "#747e92",
+        "$value": "#6B7A45",
         "$description": "Primary color of level 500."
       },
       "base": {
-        "$value": "#AEC7F6",
+        "$value": "#B5C48A",
         "source": "$primary",
         "actions": {
           "default": "{color.primary.base}"
@@ -49,11 +49,11 @@
         "actions": {
           "default": "{color.primary.700}"
         },
-        "$value": "#5a6278",
+        "$value": "#4F5A32",
         "$description": "Primary color of level 700."
       },
       "light": {
-        "$value": "#292A2C",
+        "$value": "#22201A",
         "source": "$primary-light",
         "actions": {
           "default": "{color.primary.light}"
@@ -61,7 +61,7 @@
         "$description": "Light primary color, dark theme."
       },
       "border": {
-        "$value": "#777792",
+        "$value": "#8A9463",
         "source": "$primary-border",
         "actions": {
           "default": "{color.primary.border}"
@@ -71,7 +71,7 @@
     },
     "brand": {
       "base": {
-        "$value": "#CE80AA",
+        "$value": "#D4903D",
         "source": "$brand",
         "actions": {
           "default": "{color.brand.base}"
@@ -105,7 +105,7 @@
         "$description": "Text primary color, dark theme."
       },
       "button": {
-        "$value": "#112F6B",
+        "$value": "#2B3318",
         "source": "$btn-color",
         "actions": {
           "default": "{color.text.button}"
@@ -138,7 +138,7 @@
     },
     "body": {
       "bg": {
-        "$value": "#0D0D0E",
+        "$value": "#1A1C12",
         "source": "$body-bg",
         "actions": {
           "default": "{color.body.bg}"
@@ -153,7 +153,7 @@
     },
     "header": {
       "bg": {
-        "$value": "#0D0D0E",
+        "$value": "#1A1C12",
         "source": "$body-bg",
         "actions": {
           "default": "{color.body.bg}"
