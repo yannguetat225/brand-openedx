@@ -1,0 +1,14 @@
+{
+  "size": {
+    "$type": "dimension",
+    "btn": {
+      "border": {
+        "radius": {
+          "base": { "source": "$btn-border-radius", "$value": "999px", "$description": "VivaLearn: pill-shaped actions (DESIGN.md)." },
+          "lg": { "source": "$btn-border-radius-lg", "$value": "999px", "$description": "VivaLearn: pill-shaped actions (DESIGN.md)." },
+          "sm": { "source": "$btn-border-radius-sm", "$value": "999px", "$description": "VivaLearn: pill-shaped actions (DESIGN.md)." }
+        }
+      }
+    }
+  }
+}
