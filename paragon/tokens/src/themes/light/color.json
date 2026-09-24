@@ -18,24 +18,24 @@
         "$description": "Primary color of level 100."
       },
       "base": {
-        "$value": "#808C48",
+        "$value": "#354B1D",
         "source": "$primary",
         "$description": "Basic primary color."
       },
       "light": {
-        "$value": "#FAF3E0",
+        "$value": "#DCE5CC",
         "source": "$primary-light",
         "$description": "Light primary color."
       }
     },
     "text": {
       "base": {
-        "$value": "#111827",
+        "$value": "#292B26",
         "source": "$text-color",
         "$description": "Text base color."
       },
       "light": {
-        "$value": "#515661",
+        "$value": "#64665E",
         "source": "$text-color-light",
         "$description": "Text light color."
       },
@@ -45,9 +45,49 @@
         "$description": "Footer text color."
       },
       "primary": {
-        "$value": "#515661",
+        "$value": "#354B1D",
         "source": "$text-color-primary",
         "$description": "Text primary color."
+      }
+    },
+    "brand": {
+      "base": {
+        "$value": "#5C7A2E",
+        "source": "$brand",
+        "$description": "VivaLearn primary-signal olive (DESIGN.md)."
+      }
+    },
+    "accent": {
+      "a": {
+        "$value": "#C4782A",
+        "source": "$accent-a",
+        "$description": "VivaLearn amber, signal only (DESIGN.md)."
+      },
+      "b": {
+        "$value": "#F2DCC3",
+        "source": "$accent-b",
+        "$description": "VivaLearn accent-soft (DESIGN.md)."
+      }
+    },
+    "light": {
+      "base": {
+        "$value": "#EDE8DD",
+        "source": "$light",
+        "$description": "VivaLearn surface-muted (DESIGN.md)."
+      }
+    },
+    "gray": {
+      "700": {
+        "$value": "#292B26",
+        "source": "$gray-700",
+        "$description": "VivaLearn ink, body text (DESIGN.md)."
+      }
+    },
+    "bg": {
+      "base": {
+        "$value": "#F5F0E8",
+        "source": "$body-bg",
+        "$description": "VivaLearn canvas cream (DESIGN.md)."
       }
     }
   },
