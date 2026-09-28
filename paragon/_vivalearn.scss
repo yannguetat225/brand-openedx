@@ -1,0 +1,74 @@
+// VivaLearn layer (DESIGN.md), loaded last from _overrides.scss.
+// Selectors follow frontend-app-learner-dashboard release/ulmo.3: the older
+// "#dashboard-container .container-mw-xl.container-fluid ..." block in _footer.scss
+// no longer matches that DOM (no .container-mw-xl, no .widget-sidebar).
+
+$vl-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+// Pill actions. Paragon core and this brand core both declare these variables on
+// :root, so the winner depended on stylesheet order (pills on authn, not on the
+// learner dashboard). html:root outranks :root whatever the order.
+html:root {
+    --pgn-size-btn-border-radius-base: 999px;
+    --pgn-size-btn-border-radius-lg: 999px;
+    --pgn-size-btn-border-radius-sm: 999px;
+}
+
+// Editorial serif for headings, medium weight. _overrides.scss forces Inter on every
+// element with !important, so this needs !important and a more specific selector.
+#root {
+    h1, h2, h3, h4, .h1, .h2, .h3, .h4, .display-1, .display-2, .display-3, .display-4 {
+        font-family: $vl-serif !important;
+        font-weight: 500 !important;
+        letter-spacing: -0.01em;
+    }
+}
+
+// Header on the cream page ground instead of white.
+#root header.site-header-desktop,
+#root header.site-header-mobile {
+    background-color: var(--pgn-color-bg-base);
+    border-bottom: 1px solid rgba(53, 75, 29, 0.16);
+    box-shadow: none;
+}
+
+#dashboard-container {
+    .course-list-heading-container .course-list-title {
+        font-size: 2rem;
+        line-height: 1.1;
+        color: var(--pgn-color-text-base);
+    }
+
+    .course-card .pgn__card {
+        background-color: #FFFDF8;
+        border: 1px solid rgba(53, 75, 29, 0.16);
+        border-radius: 22px;
+        box-shadow: none !important;
+        overflow: hidden;
+    }
+
+    // "Note requise…" and other card banners: paper-muted instead of Paragon info blue.
+    .course-card .alert.alert-info {
+        background-color: #EDE8DD;
+        color: var(--pgn-color-text-base);
+        border: 0;
+        .alert-icon {
+            color: var(--pgn-color-primary-base);
+        }
+    }
+}
+
+// "À la recherche d'un nouveau défi ?": drop the cyan illustration, keep a quiet note.
+#looking-for-challenge-widget {
+    background-color: #FFFDF8;
+    border: 1px solid rgba(53, 75, 29, 0.16);
+    border-radius: 22px;
+    box-shadow: none !important;
+    .pgn__card-wrapper-image-cap {
+        display: none !important;
+    }
+    .pgn__card-body {
+        padding: 24px !important;
+        margin: 0 !important;
+    }
+}

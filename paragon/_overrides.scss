@@ -479,3 +479,6 @@ body {
 
 // Including dark theme
 @import "./dark";
+
+// VivaLearn layer (DESIGN.md) — must stay last.
+@import "./vivalearn";
