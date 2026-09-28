@@ -8950,6 +8950,10 @@ html:root {
   font-weight: 500 !important;
   letter-spacing: -0.01em;
 }
+#root h1 *, #root h2 *, #root h3 *, #root h4 *, #root .h1 *, #root .h2 *, #root .h3 *, #root .h4 *, #root .display-1 *, #root .display-2 *, #root .display-3 *, #root .display-4 * {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
 
 #root header.site-header-desktop,
 #root header.site-header-mobile {

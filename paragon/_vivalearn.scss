@@ -21,6 +21,11 @@ html:root {
         font-family: $vl-serif !important;
         font-weight: 500 !important;
         letter-spacing: -0.01em;
+        // inner spans/divs (e.g. authn "avec Vivalearn") would otherwise get the global Inter
+        * {
+            font-family: inherit !important;
+            font-weight: inherit !important;
+        }
     }
 }
 
