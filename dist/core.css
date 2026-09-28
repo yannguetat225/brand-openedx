@@ -8938,3 +8938,57 @@ p > [data-paragon-theme-variant=dark] a.muted-link[href]:not(.btn):hover, [data-
   color: var(--pgn-color-text-base) !important;
   background: var(--pgn-color-body-bg) !important;
 }
+/* VivaLearn layer (paragon/_vivalearn.scss) — appended: make build hangs */
+html:root {
+  --pgn-size-btn-border-radius-base: 999px;
+  --pgn-size-btn-border-radius-lg: 999px;
+  --pgn-size-btn-border-radius-sm: 999px;
+}
+
+#root h1, #root h2, #root h3, #root h4, #root .h1, #root .h2, #root .h3, #root .h4, #root .display-1, #root .display-2, #root .display-3, #root .display-4 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em;
+}
+
+#root header.site-header-desktop,
+#root header.site-header-mobile {
+  background-color: var(--pgn-color-bg-base);
+  border-bottom: 1px solid rgba(53, 75, 29, 0.16);
+  box-shadow: none;
+}
+
+#dashboard-container .course-list-heading-container .course-list-title {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--pgn-color-text-base);
+}
+#dashboard-container .course-card .pgn__card {
+  background-color: #FFFDF8;
+  border: 1px solid rgba(53, 75, 29, 0.16);
+  border-radius: 22px;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+#dashboard-container .course-card .alert.alert-info {
+  background-color: #EDE8DD;
+  color: var(--pgn-color-text-base);
+  border: 0;
+}
+#dashboard-container .course-card .alert.alert-info .alert-icon {
+  color: var(--pgn-color-primary-base);
+}
+
+#looking-for-challenge-widget {
+  background-color: #FFFDF8;
+  border: 1px solid rgba(53, 75, 29, 0.16);
+  border-radius: 22px;
+  box-shadow: none !important;
+}
+#looking-for-challenge-widget .pgn__card-wrapper-image-cap {
+  display: none !important;
+}
+#looking-for-challenge-widget .pgn__card-body {
+  padding: 24px !important;
+  margin: 0 !important;
+}
