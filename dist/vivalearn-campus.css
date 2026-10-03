@@ -1,0 +1,61 @@
+/* VivaLearn Campus — styles loaded at RUNTIME by every application (not built into the MFE image).
+   The applications read the address of this file from MFE_CONFIG["VIVALEARN_STYLES_URL"] (tutor-ulmo-vivai-theme,
+   tutorindigo/plugin.py), served by jsDelivr at a pinned commit. To change a style: edit this file, commit, push,
+   update the commit in plugin.py, `tutor config save`, restart the LMS — no image build (decision Yann 03/10). */
+
+/* Account settings in the VivaLearn style (decision Yann 03/10, mock-up validated by him). The application
+   has no slot to reorganise the page: sections are restyled, four of them hidden. */
+.page__account-settings { --vla-olive: #354B1D; --vla-paper: #FFFDF8; --vla-line: rgba(53, 75, 29, 0.16);
+  --vla-ink: #292B26; --vla-muted: #64665E; --vla-soft: #DCE5CC; --vla-danger: #9B2C1F; --vla-accent: #C4782A;
+  max-width: 1120px !important; }
+[data-paragon-theme-variant="dark"] .page__account-settings { --vla-olive: #DCE5CC; --vla-paper: #20241E;
+  --vla-line: rgba(220, 229, 204, 0.2); --vla-ink: #DEDDD4; --vla-muted: #A3A598; --vla-soft: #2D3824;
+  --vla-danger: #F0A99F; --vla-accent: #E0A566; }
+.page__account-settings h1 { font-size: 1.9rem !important; color: var(--vla-olive) !important; }
+/* hidden: public profile, social links, notifications, year of birth (5th block of the first section) */
+.page__account-settings #profile-information, .page__account-settings #social-media,
+.page__account-settings #notifications, .page__account-settings #notifications + hr,
+.page__account-settings #basic-information > div:nth-of-type(5),
+.page__account-settings .jump-nav li:has(a[href$="#profile-information"]),
+.page__account-settings .jump-nav li:has(a[href$="#social-media"]),
+.page__account-settings .jump-nav li:has(a[href$="#notifications"]) { display: none !important; }
+.page__account-settings .col-md-9 > hr, .page__account-settings .col-md-9 > .border { display: none !important; }
+/* menu */
+.page__account-settings .jump-nav ul { display: flex; flex-direction: column; gap: 4px; }
+.page__account-settings .jump-nav a { display: block; padding: 8px 12px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 400 !important; color: var(--vla-olive) !important; text-decoration: none !important; }
+.page__account-settings .jump-nav li.is-current a, .page__account-settings .jump-nav a:hover {
+  background: var(--vla-soft); font-weight: 600 !important; }
+/* sections and blocks */
+.page__account-settings .account-section .section-heading { font-size: 1.25rem !important; color: var(--vla-olive) !important; }
+.page__account-settings .account-section > p { color: var(--vla-muted) !important; }
+.page__account-settings .account-section .form-group { background: var(--vla-paper) !important;
+  border: 1px solid var(--vla-line) !important; border-left: 1px solid var(--vla-line) !important;
+  border-radius: 12px !important; padding: 18px 22px !important; margin: 0 0 12px !important; box-shadow: none !important; }
+.page__account-settings .account-section .form-group .form-group { border: 0 !important; padding: 0 !important; margin: 0 0 8px !important; background: transparent !important; }
+.page__account-settings .account-section .form-group > .d-flex { justify-content: space-between; align-items: center !important; }
+.page__account-settings .account-section h6 { font-size: 1rem !important; font-weight: 600 !important; color: var(--vla-ink) !important; margin: 0 0 4px !important; }
+.page__account-settings .account-section p.text-truncate { font-weight: 500; color: var(--vla-ink) !important; margin: 0 0 6px !important; }
+.page__account-settings .account-section p.small.text-muted { background: transparent !important; padding: 0 !important;
+  margin: 0 !important; border: 0 !important; color: var(--vla-muted) !important; font-size: 0.88rem !important; }
+.page__account-settings .account-section > .pgn-transition-replace-group { background: transparent !important;
+  border: 0 !important; padding: 0 !important; margin: 0 !important; box-shadow: none !important; }
+.page__account-settings .account-section .form-group > .d-flex > .btn { position: static !important; margin: 0 0 0 16px !important;
+  background: transparent !important; color: var(--vla-olive) !important; border: 1px solid var(--vla-line) !important;
+  border-radius: 999px !important; padding: 6px 16px !important; font-size: 0.88rem !important; font-weight: 600 !important;
+  text-decoration: none !important; white-space: nowrap; }
+.page__account-settings .account-section .form-group > .d-flex > .btn:hover { background: var(--vla-soft) !important; }
+.page__account-settings .account-section .form-group > .d-flex > .btn svg { display: none; }
+.page__account-settings .account-section .form-group p .btn-link,
+.page__account-settings #linked-accounts .btn-link { color: var(--vla-olive) !important; font-size: 0.95rem !important; padding: 0 !important; }
+.page__account-settings .account-section, .page__account-settings .account-section .section-heading { border: 0 !important; }
+.page__account-settings .account-section::before, .page__account-settings .account-section .section-heading::before { display: none !important; }
+.page__account-settings #delete-account .section-heading { color: var(--vla-danger) !important; }
+/* account created with a WhatsApp number: no mailbox behind its technical address */
+.page__account-settings p.vl-technical-email { font-size: 0 !important; }
+.page__account-settings p.vl-technical-email::after { content: "Aucun e-mail enregistré"; font-size: 1rem; }
+.page__account-settings .account-section .form-group > .d-flex > .btn.vl-technical-edit { font-size: 0 !important; border-color: var(--vla-accent) !important; }
+.page__account-settings .account-section .btn.vl-technical-edit::after { content: "Ajouter mon e-mail"; font-size: 0.88rem; }
+/* without e-mail a password reset reaches nobody, and unlinking WhatsApp would lock the learner out */
+body.vl-technical-account .page__account-settings #basic-information > .form-group,
+body.vl-technical-account .page__account-settings [data-provider-id="oa2-whatsapp"] { display: none !important; }
