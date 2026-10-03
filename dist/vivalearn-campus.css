@@ -59,3 +59,8 @@
 /* without e-mail a password reset reaches nobody, and unlinking WhatsApp would lock the learner out */
 body.vl-technical-account .page__account-settings #basic-information > .form-group,
 body.vl-technical-account .page__account-settings [data-provider-id="oa2-whatsapp"] { display: none !important; }
+/* phone: the four sections on one or two lines instead of a tall column */
+@media (max-width: 767px) {
+  .page__account-settings .jump-nav ul { flex-direction: row; flex-wrap: wrap; gap: 4px 6px; }
+  .page__account-settings .jump-nav a { padding: 6px 12px; border: 1px solid var(--vla-line); border-radius: 999px; font-size: 0.88rem; }
+}
