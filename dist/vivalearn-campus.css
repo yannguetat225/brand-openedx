@@ -86,3 +86,59 @@ html[data-paragon-theme-variant="dark"] { --pgn-color-link-base: #DCE5CC; --pgn-
    (axe, 05/10): « Viva répond à partir de cette unité du cours » and the course licence « Tous droits réservés ». 5.55:1 */
 html[data-paragon-theme-variant="light"] .ai-request-container .text-muted,
 html[data-paragon-theme-variant="light"] main .text-right.small .text-gray-500 { color: #5F6158 !important; }
+
+/* Module home of the pilot courses (phase 2, option C chosen by Yann on 05/10): numbered path of modules rendered by
+   VivaModuleHome in the course home outline slot. body.vl-module-home is set by the widget only on those courses:
+   the native start card and « Déplier tout » are replaced by its « Reprendre » button. */
+body.vl-module-home [data-testid="start-resume-card"], body.vl-module-home #expand-button-row { display: none !important; }
+.vlmh { --vlmh-ol: #354B1D; --vlmh-ol2: #5C7A2E; --vlmh-am: #8A5A1E; --vlmh-cr: #F5F0E8; --vlmh-pa: #FFFDF8;
+  --vlmh-so: #DCE5CC; --vlmh-li: rgba(53, 75, 29, 0.16); --vlmh-mu: #5F6158; --vlmh-ink: #292B26; --vlmh-btn-ink: #FFFFFF;
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; color: var(--vlmh-ink); }
+[data-paragon-theme-variant="dark"] .vlmh { --vlmh-ol: #DCE5CC; --vlmh-ol2: #A9C17F; --vlmh-am: #E0A566; --vlmh-cr: #2A2E27;
+  --vlmh-pa: #20241E; --vlmh-so: #2D3824; --vlmh-li: rgba(220, 229, 204, 0.18); --vlmh-mu: #A3A598; --vlmh-ink: #DEDDD4;
+  --vlmh-btn-ink: #17200E; }
+.vlmh-loading { color: var(--vlmh-mu); min-height: 240px; }
+.vlmh-eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--vlmh-am); font-weight: 700; margin: 0 0 4px; }
+.vlmh-title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.35rem;
+  line-height: 1.25; color: var(--vlmh-ol); margin: 0 0 6px; font-weight: 600; text-wrap: balance; }
+.vlmh-muted { color: var(--vlmh-mu); font-size: .95rem; margin: 0; }
+.vlmh-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 24px;
+  border-radius: 999px; background: var(--vlmh-ol); color: var(--vlmh-btn-ink) !important; font-weight: 600;
+  text-decoration: none !important; white-space: nowrap; }
+.vlmh-btn:hover, .vlmh-btn:focus-visible { filter: brightness(1.12); }
+.vlmh-timeline { list-style: none; margin: 0; padding: 0; }
+.vlmh-tl { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; position: relative; padding-bottom: 20px; }
+.vlmh-tl:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 44px; bottom: 0; width: 2px; background: var(--vlmh-li); }
+.vlmh-dot { width: 44px; height: 44px; border-radius: 50%; background: var(--vlmh-cr); border: 2px solid var(--vlmh-li);
+  display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--vlmh-mu); }
+.vlmh-tl.is-now .vlmh-dot { background: var(--vlmh-ol); border-color: var(--vlmh-ol); color: var(--vlmh-btn-ink); }
+.vlmh-tl.is-done .vlmh-dot { background: var(--vlmh-so); border-color: var(--vlmh-ol2); color: var(--vlmh-ol); }
+.vlmh-tl-body { background: var(--vlmh-pa); border: 1px solid var(--vlmh-li); border-radius: 16px; padding: 16px 20px; min-width: 0; }
+.vlmh-tl.is-now .vlmh-tl-body { border-color: var(--vlmh-ol2); box-shadow: 0 2px 10px rgba(53, 75, 29, .08); }
+.vlmh-bar { height: 8px; background: var(--vlmh-cr); border-radius: 999px; overflow: hidden; margin: 10px 0 0; }
+.vlmh-bar span { display: block; height: 100%; background: var(--vlmh-ol2); }
+.vlmh-next { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 16px;
+  background: var(--vlmh-so); border-radius: 12px; padding: 12px 16px; margin: 12px 0 4px; }
+.vlmh-next .vlmh-eyebrow { grid-column: 1 / -1; margin: 0; }
+.vlmh-next-title { font-weight: 700; margin: 0; color: var(--vlmh-ink); }
+.vlmh-next-title .vlmh-tag { margin-left: 8px; font-weight: 500; }
+.vlmh details summary { cursor: pointer; color: var(--vlmh-ol); font-weight: 600; margin-top: 10px; min-height: 32px; }
+.vlmh-steps { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--vlmh-li); }
+.vlmh-steps li { display: flex; align-items: center; gap: 12px; padding: 8px 4px; border-bottom: 1px solid var(--vlmh-li); }
+.vlmh-steps li.is-next { background: var(--vlmh-so); box-shadow: inset 4px 0 0 var(--vlmh-ol2); border-radius: 6px; }
+.vlmh-step-title { flex: 1; min-width: 0; color: var(--vlmh-ink) !important; text-decoration: none !important; }
+.vlmh-step-title:hover, .vlmh-step-title:focus-visible { text-decoration: underline !important; }
+.vlmh-tag { font-size: .8rem; color: var(--vlmh-mu); white-space: nowrap; }
+.vlmh-tick { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--vlmh-li); display: inline-flex;
+  align-items: center; justify-content: center; font-size: .75rem; flex: none; }
+.vlmh-tick.is-done { background: var(--vlmh-ol2); border-color: var(--vlmh-ol2); color: var(--vlmh-btn-ink); }
+@media (max-width: 600px) {
+  .vlmh-tl { grid-template-columns: 34px minmax(0, 1fr); gap: 10px; }
+  .vlmh-dot { width: 34px; height: 34px; }
+  .vlmh-tl:not(:last-child)::before { left: 16px; top: 34px; }
+  .vlmh-tl-body { padding: 14px; }
+  .vlmh-next { grid-template-columns: 1fr; }
+  .vlmh-next .vlmh-btn { width: 100%; }
+  .vlmh-steps li { gap: 8px; }
+  .vlmh-tag { font-size: .75rem; }
+}
