@@ -64,3 +64,21 @@ body.vl-technical-account .page__account-settings [data-provider-id="oa2-whatsap
   .page__account-settings .jump-nav ul { flex-direction: row; flex-wrap: wrap; gap: 4px 6px; }
   .page__account-settings .jump-nav a { padding: 6px 12px; border: 1px solid var(--vla-line); border-radius: 999px; font-size: 0.88rem; }
 }
+
+/* Course player (learning MFE), phase 1 of 05/10 (decision Yann, after the edX/Coursera review). */
+/* Outline on tablets and phones: Ulmo gives the panel the full-screen classes (fixed-top w-100 vh-100), but its own
+   CourseOutlineTray.scss sets .outline-sidebar-wrapper { position: relative }, which wins and pushes the lesson off the
+   screen (frontend-app-learning release/ulmo). Two classes beat one: the panel covers the screen, as intended upstream. */
+.outline-sidebar-wrapper.fixed-top { position: fixed !important; overflow-y: auto; }
+/* Links in the VivaLearn olive instead of Paragon's info blue (#006DAA, hover #003C5E); 8.5:1 on the cream page */
+html[data-paragon-theme-variant="light"] { --pgn-color-link-base: #354B1D; --pgn-color-link-hover: #253516; }
+html[data-paragon-theme-variant="dark"] { --pgn-color-link-base: #DCE5CC; --pgn-color-link-hover: #FFFFFF; }
+/* Current unit of the outline: olive tint and a left marker instead of Paragon's info-100 blue (#F0F6FA). The marker sits on
+   the link: when the outline opens on a phone the link gets the focus and its own hover background, which would hide it. */
+.outline-sidebar li.bg-info-100 { background-color: #DCE5CC !important; }
+.outline-sidebar li.bg-info-100 > a { box-shadow: inset 4px 0 0 #5C7A2E; }
+.outline-sidebar li.bg-info-100 > a:hover, .outline-sidebar li.bg-info-100 > a:focus { background-color: #CFDCB8 !important; }
+[data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 { background-color: #2D3824 !important; }
+[data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a { box-shadow: inset 4px 0 0 #DCE5CC; }
+[data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a:hover,
+[data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a:focus { background-color: #38452C !important; }
