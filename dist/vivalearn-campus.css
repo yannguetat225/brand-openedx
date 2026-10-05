@@ -82,3 +82,7 @@ html[data-paragon-theme-variant="dark"] { --pgn-color-link-base: #DCE5CC; --pgn-
 [data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a { box-shadow: inset 4px 0 0 #DCE5CC; }
 [data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a:hover,
 [data-paragon-theme-variant="dark"] .outline-sidebar li.bg-info-100 > a:focus { background-color: #38452C !important; }
+/* Muted texts of the course player on the cream page: Paragon's grey #707070 gives 4.36:1, under the 4.5:1 threshold
+   (axe, 05/10): « Viva répond à partir de cette unité du cours » and the course licence « Tous droits réservés ». 5.55:1 */
+html[data-paragon-theme-variant="light"] .ai-request-container .text-muted,
+html[data-paragon-theme-variant="light"] main .text-right.small .text-gray-500 { color: #5F6158 !important; }
