@@ -164,3 +164,39 @@ body.vl-module-home [data-testid="start-resume-card"], body.vl-module-home #expa
   .col-md-4 > :has(.vlmh-progress-next), .col-md-4 > .vlmh-progress-next { order: -1; }
   .vlmh-progress-next .vlmh-btn { align-self: stretch; }
 }
+
+/* Unit pages of the pilot courses (body.vl-pilot set by VivaPilotMarker): « Suivant » is the main action. */
+body.vl-pilot .next-button.justify-content-center { background: #354B1D !important; border-color: #354B1D !important;
+  color: #FFFFFF !important; border-radius: 999px !important; min-height: 48px; padding-inline: 28px !important; font-weight: 600; }
+body.vl-pilot .next-button.justify-content-center:hover { background: #253516 !important; border-color: #253516 !important; }
+body.vl-pilot .previous-button.justify-content-center { border-radius: 999px !important; min-height: 48px;
+  border-color: rgba(53, 75, 29, .3) !important; color: #354B1D !important; background: transparent !important; }
+[data-paragon-theme-variant="dark"] body.vl-pilot .next-button.justify-content-center { background: #DCE5CC !important;
+  border-color: #DCE5CC !important; color: #17200E !important; }
+[data-paragon-theme-variant="dark"] body.vl-pilot .previous-button.justify-content-center { color: #DCE5CC !important;
+  border-color: rgba(220, 229, 204, .35) !important; }
+
+/* « Approfondir avec Viva » (VivaDeepen, phase 2, decision Yann 05/10) under the unit title of the pilot courses. */
+.vlvd { --vlvd-ol: #354B1D; --vlvd-ol2: #5C7A2E; --vlvd-am: #8A5A1E; --vlvd-pa: #FFFDF8; --vlvd-so: #DCE5CC;
+  --vlvd-li: rgba(53, 75, 29, 0.18); --vlvd-mu: #5F6158; --vlvd-ink: #292B26; --vlvd-err: #9B2C1F;
+  background: var(--vlvd-pa); border: 1px solid var(--vlvd-li); border-radius: 14px; padding: 10px 16px; margin: 8px 0 16px; color: var(--vlvd-ink); }
+[data-paragon-theme-variant="dark"] .vlvd { --vlvd-ol: #DCE5CC; --vlvd-ol2: #A9C17F; --vlvd-am: #E0A566; --vlvd-pa: #20241E;
+  --vlvd-so: #2D3824; --vlvd-li: rgba(220, 229, 204, 0.18); --vlvd-mu: #A3A598; --vlvd-ink: #DEDDD4; --vlvd-err: #F0A99F; }
+.vlvd summary { cursor: pointer; min-height: 36px; display: flex; align-items: center; color: var(--vlvd-ol); font-weight: 600; }
+.vlvd-title::before { content: "✦ "; color: var(--vlvd-am); }
+.vlvd-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
+.vlvd-chip { min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--vlvd-ol2); background: transparent;
+  color: var(--vlvd-ol); font-size: .9rem; font-weight: 600; cursor: pointer; }
+.vlvd-chip:hover, .vlvd-chip.is-active { background: var(--vlvd-so); }
+.vlvd-chip:focus-visible, .vlvd-more:focus-visible { outline: 2px solid var(--vlvd-ol); outline-offset: 2px; }
+.vlvd-chip:disabled { opacity: .6; cursor: progress; }
+.vlvd-answer:empty { display: none; }
+.vlvd-answer { margin: 8px 0 4px; }
+.vlvd-eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--vlvd-am); font-weight: 700; margin: 4px 0; }
+.vlvd-text { background: var(--vlvd-so); border-radius: 12px; padding: 12px 16px; max-width: 40rem; }
+.vlvd-text p, .vlvd-text ul, .vlvd-text ol { margin: 0 0 8px; }
+.vlvd-text :last-child { margin-bottom: 0; }
+.vlvd-muted { color: var(--vlvd-mu); margin: 0; }
+.vlvd-error { color: var(--vlvd-err); margin: 0; }
+.vlvd-more { margin-top: 10px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: var(--vlvd-ol);
+  color: var(--vlvd-pa); font-weight: 600; cursor: pointer; }
