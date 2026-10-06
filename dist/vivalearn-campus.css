@@ -142,3 +142,13 @@ body.vl-module-home [data-testid="start-resume-card"], body.vl-module-home #expa
   .vlmh-steps li { gap: 8px; }
   .vlmh-tag { font-size: .75rem; }
 }
+
+/* Focus ring of the course player buttons (06/10, capture of Yann): Paragon draws a pill-shaped ::before ring on :focus,
+   so a mouse click on a square outline row left a pill around it. In the player: no ring after a mouse focus; the
+   keyboard ring (:focus-visible) stays, drawn inside the square outline rows. */
+.outline-sidebar-wrapper .btn:focus:not(:focus-visible)::before,
+.sequence-container .btn:focus:not(:focus-visible)::before { display: none !important; }
+.outline-sidebar .btn.w-100:focus-visible::before { border-radius: 0 !important; inset: 2px !important; }
+/* Current module in the list of modules (the button itself carries Paragon's info-100 blue there) */
+.outline-sidebar .btn.bg-info-100 { background-color: #DCE5CC !important; box-shadow: inset 4px 0 0 #5C7A2E; }
+[data-paragon-theme-variant="dark"] .outline-sidebar .btn.bg-info-100 { background-color: #2D3824 !important; box-shadow: inset 4px 0 0 #DCE5CC; }
