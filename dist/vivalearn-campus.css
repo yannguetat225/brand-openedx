@@ -218,3 +218,7 @@ body.vl-pilot .previous-button.justify-content-center { border-radius: 999px !im
 /* Bookmark label in the dark theme (Codex review 07/10): text-primary-500 is #6b7a45 there, 3.68:1 on the unit background.
    Lightened for this button only; the dark primary token also colours filled buttons, so it is left as is. */
 [data-paragon-theme-variant="dark"] .pgn__stateful-btn.text-primary-500 { color: #a9c77c !important; }
+
+/* Learner dashboard, « À la recherche d'un nouveau défi ? » card in the dark theme (Codex final review 07/10): the card kept
+   its light background under the near-white dark-theme text (1.04:1) and amber link (2.62:1). Dark surface for this card only. */
+[data-paragon-theme-variant="dark"] #looking-for-challenge-widget { background-color: #1f2118 !important; border-color: #36392b !important; }
