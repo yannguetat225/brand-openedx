@@ -214,3 +214,7 @@ body.vl-pilot .previous-button.justify-content-center { border-radius: 999px !im
   details.vlvd > summary { padding-top: 8px !important; padding-bottom: 8px !important; }
 }
 @media (min-width: 601px) { .vlvd-chip-ask { display: none; } }
+
+/* Bookmark label in the dark theme (Codex review 07/10): text-primary-500 is #6b7a45 there, 3.68:1 on the unit background.
+   Lightened for this button only; the dark primary token also colours filled buttons, so it is left as is. */
+[data-paragon-theme-variant="dark"] .pgn__stateful-btn.text-primary-500 { color: #a9c77c !important; }
