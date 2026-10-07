@@ -200,3 +200,17 @@ body.vl-pilot .previous-button.justify-content-center { border-radius: 999px !im
 .vlvd-error { color: var(--vlvd-err); margin: 0; }
 .vlvd-more { margin-top: 10px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: var(--vlvd-ol);
   color: var(--vlvd-pa); font-weight: 600; cursor: pointer; }
+
+/* Lesson top on phones, option D « Viva réuni » (decision Yann 07/10, Codex review): in the pilot units (those with the
+   « Approfondir avec Viva » block) the Viva row is hidden and « Poser votre question » joins the block's requests; tabs,
+   bookmark and block spacing tightened (variant C). !important where Open edX utility classes are !important (mb-3,
+   btn-sm, px-1). Wider screens unchanged; the free-question chip only shows on phones. */
+@media (max-width: 600px) {
+  body:has(details.vlvd) .configurable-ai-assistance { display: none !important; }
+  body:has(details.vlvd) .course-tabs-navigation { margin-bottom: 4px !important; }
+  body:has(details.vlvd) button.pgn__stateful-btn { font-size: 0 !important; min-height: 32px; padding-top: 0 !important; padding-bottom: 0 !important; }
+  body:has(details.vlvd) button.pgn__stateful-btn svg { width: 20px; height: 20px; }
+  details.vlvd { margin-top: 4px !important; margin-bottom: 8px !important; }
+  details.vlvd > summary { padding-top: 8px !important; padding-bottom: 8px !important; }
+}
+@media (min-width: 601px) { .vlvd-chip-ask { display: none; } }
